@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Livros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- <ion-list-header>  <strong>Livros Cadastrados</strong> </ion-list-header> -->
+
+    <ion-item-sliding *ngFor="let livro of listaLivro">   
+      <ion-item>
+
+        <ion-avatar slot="start">
+          <img [src]="livro.foto" />
+        </ion-avatar>
+
+        <ion-label>
+            <h2><strong>{{livro.titulo}}</strong></h2>
+
+            <h3>Autor: {{livro.autor}}</h3>
+
+            <h3>ISBN: {{livro.isbn}}</h3>
+        </ion-label>    
+
+      </ion-item>
+
+      
+    </ion-item-sliding>
+  
+  </ion-list>
+
+</ion-content>
